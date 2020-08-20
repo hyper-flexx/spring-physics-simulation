@@ -19,7 +19,7 @@ void TransitionPoint::update_acceleration() {
 	point_acceleration = get_acceleration();
 }
 
-void TransitionPoint::update_position(time t) {
+void TransitionPoint::update_position(simulation_time t) {
 	coordinate += ((speed * t) + ((point_acceleration * t * t) / 2));
 	speed += point_acceleration * t;
 }
